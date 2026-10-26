@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta name="author" content="Tim Korn">
-    <meta name="description" content="SWDV-116 Lab 9"> 
+    <meta name="description" content="SWDV-116 Lab 10"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tim's Car Rentals</title>
@@ -29,7 +29,28 @@
     </ul>
 </nav>
         </div>
-       <div class="hero-image" role="img" aria-label="Hand holding car keys next to a white car"></div>
+             <div class="hero-image" role="img" aria-label="Hand holding car keys next to a white car"></div>
+
+       <div class="hero-form">
+           <h2>Rent A Car Today</h2>
+           <form action="cars.html" method="GET">
+               <label for="type">Car Type</label>
+               <select id="type" name="type">
+                   <option value="sedan">Sedan</option>
+                   <option value="suv">SUV</option>
+                   <option value="truck">Truck</option>
+                   <option value="van">Van</option>
+               </select>
+
+               <label for="pickup">Pickup Date</label>
+               <input type="date" id="pickup" name="pickup">
+
+               <label for="return">Return Date</label>
+               <input type="date" id="return" name="return">
+
+               <button type="submit">Search</button>
+           </form>
+       </div>
     </div>
 <section class="featured-cars">
  <video autoplay controls muted>

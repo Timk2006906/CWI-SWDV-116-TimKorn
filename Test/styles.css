@@ -6,6 +6,7 @@ body {
 
 .hero {
     background-color: white;
+    position: relative;
 }
 
 .hero-top {
@@ -55,6 +56,30 @@ body {
     background-size: cover;
     background-position: center;
     background-image: url("images/hero_1-480w.jpg");
+}
+
+.hero-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.hero-form h2 {
+    margin: 0 0 0.5rem;
+}
+
+.hero-form label,
+.hero-form select,
+.hero-form input,
+.hero-form button {
+    display: block;
+    margin: 0.5rem auto;
 }
 
 @media screen and (min-width: 600px) {
@@ -160,6 +185,12 @@ body {
     .car-card {
         max-width: 90%;
         width: 90%;
+    }
+
+    .hero-form {
+        width: 80%;
+        padding: 1rem;
+        box-sizing: border-box;
     }
 }
 
