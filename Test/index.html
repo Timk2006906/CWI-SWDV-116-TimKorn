@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="author" content="Tim Korn">
-    <meta name="description" content="SWDV-116 Lab 12"> 
+    <meta name="description" content="SWDV-116 Lab 12">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tim's Car Rentals</title>
@@ -17,138 +16,143 @@
             <header class="header">
                 <h1>Tim's Car Rentals</h1>
             </header>
-          <nav class="navbar">
-    <input type="checkbox" id="toggle">
-    <label for="toggle" class="menu-btn"></label>
-    <ul class="menu">
-        <li class="fa fa-home"><a href="index.html"> Home</a></li>
-        <li class="fa fa-car"><a href="cars.html"> Cars</a></li>
-        <li class="fa fa-comment"><a href="testimonials.html"> Testimonials</a></li>
-        <li class="fa fa-info-circle"><a href="about.html"> About</a></li>
-        <li class="fa fa-envelope"><a href="contact.html"> Contact</a></li>
-    </ul>
-</nav>
-        </div>
-             <div class="hero-image" role="img" aria-label="Hand holding car keys next to a white car"></div>
-
-       <div class="hero-form">
-           <h2>Rent A Car Today</h2>
-           <form action="cars.html" method="GET">
-               <label for="type">Car Type</label>
-               <select id="type" name="type">
-                   <option value="sedan">Sedan</option>
-                   <option value="suv">SUV</option>
-                   <option value="truck">Truck</option>
-                   <option value="van">Van</option>
-               </select>
-
-               <label for="pickup">Pickup Date</label>
-               <input type="date" id="pickup" name="pickup">
-
-               <label for="return">Return Date</label>
-               <input type="date" id="return" name="return">
-
-               <button type="submit">Search</button>
-           </form>
-       </div>
-    </div>
-<section class="featured-cars">
- <video autoplay controls muted>
-    <source src="Video/DrivingVideo.mp4" type="video/mp4">
-    <track
-    src="Video/subtitles.vtt"
-    kind="subtitles"
-    srclang="en"
-    label="English"
-    default>
-</video>
-<audio autoplay controls>
-    <source src="Video/DrivingMusic.mp4" type="audio/mp4">
-</audio>
-    <h2>Featured Cars</h2>
-    <div class="car-grid">
-
-        <div class="car-card">
-            <picture>
-                <source type="image/webp" media="(max-width: 600px)" srcset="images/car_1-480w.webp">
-                <source type="image/webp" srcset="images/car_1-320w.webp">
-                <source media="(max-width: 600px)" srcset="images/car_1-480w.jpg">
-                <img src="images/car_1-320w.jpg" alt="Car Model 1">
-            </picture>
-            <h3>Car Model 1</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <nav class="navbar">
+                <input type="checkbox" id="toggle">
+                <label for="toggle" class="menu-btn"></label>
+                <ul class="menu">
+                    <li class="fa fa-home"><a href="index.html"> Home</a></li>
+                    <li class="fa fa-car"><a href="cars.html"> Cars</a></li>
+                    <li class="fa fa-comment"><a href="testimonials.html"> Testimonials</a></li>
+                    <li class="fa fa-info-circle"><a href="about.html"> About</a></li>
+                    <li class="fa fa-envelope"><a href="contact.html"> Contact</a></li>
+                </ul>
+            </nav>
         </div>
 
-        <div class="car-card">
-            <picture>
-                <source type="image/webp" media="(max-width: 600px)" srcset="images/car_2-480w.webp">
-                <source type="image/webp" srcset="images/car_2-320w.webp">
-                <source media="(max-width: 600px)" srcset="images/car_2-480w.jpg">
-                <img src="images/car_2-320w.jpg" alt="Car Model 2">
-            </picture>
-            <h3>Car Model 2</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+        <div class="hero-image" role="img" aria-label="Hand holding car keys next to a white car"></div>
 
-        <div class="car-card">
-            <picture>
-                <source type="image/webp" media="(max-width: 600px)" srcset="images/car_3-480w.webp">
-                <source type="image/webp" srcset="images/car_3-320w.webp">
-                <source media="(max-width: 600px)" srcset="images/car_3-480w.jpg">
-                <img src="images/car_3-320w.jpg" alt="Car Model 3">
-            </picture>
-            <h3>Car Model 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+        <div class="hero-form">
+            <h2>Rent A Car Today</h2>
+            <form action="cars.html" method="GET" novalidate>
+                <label for="type">Car Type</label>
+                <select id="type" name="type">
+                    <option value="sedan">Sedan</option>
+                    <option value="suv">SUV</option>
+                    <option value="truck">Truck</option>
+                    <option value="van">Van</option>
+                </select>
 
-        <div class="car-card">
-            <picture>
-                <source type="image/webp" media="(max-width: 600px)" srcset="images/car_4-480w.webp">
-                <source type="image/webp" srcset="images/car_4-320w.webp">
-                <source media="(max-width: 600px)" srcset="images/car_4-480w.jpg">
-                <img src="images/car_4-320w.jpg" alt="Car Model 4">
-            </picture>
-            <h3>Car Model 4</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+                <label for="pickup-date">Pickup Date</label>
+                <input type="date" id="pickup-date" name="pickup">
 
-        <div class="car-card">
-            <picture>
-                <source type="image/webp" media="(max-width: 600px)" srcset="images/car_5-480w.webp">
-                <source type="image/webp" srcset="images/car_5-320w.webp">
-                <source media="(max-width: 600px)" srcset="images/car_5-480w.jpg">
-                <img src="images/car_5-320w.jpg" alt="Car Model 5">
-            </picture>
-            <h3>Car Model 5</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
+                <label for="return-date">Return Date</label>
+                <input type="date" id="return-date" name="return">
 
-        <div class="car-card">
-            <picture>
-                <source type="image/webp" media="(max-width: 600px)" srcset="images/car_6-480w.webp">
-                <source type="image/webp" srcset="images/car_6-320w.webp">
-                <source media="(max-width: 600px)" srcset="images/car_6-480w.jpg">
-                <img src="images/car_6-320w.jpg" alt="Car Model 6">
-            </picture>
-            <h3>Car Model 6</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-
-        <div class="car-card">
-            <picture>
-                <source type="image/webp" media="(max-width: 600px)" srcset="images/car_7-480w.webp">
-                <source type="image/webp" srcset="images/car_7-320w.webp">
-                <source media="(max-width: 600px)" srcset="images/car_7-480w.jpg">
-                <img src="images/car_7-320w.jpg" alt="Car Model 7">
-            </picture>
-            <h3>Car Model 7</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <button type="submit" id="search-button">Search</button>
+            </form>
         </div>
     </div>
-</section>
+
+    <section class="featured-cars">
+        <video autoplay controls muted>
+            <source src="Video/DrivingVideo.mp4" type="video/mp4">
+            <track
+                src="Video/subtitles.vtt"
+                kind="subtitles"
+                srclang="en"
+                label="English"
+                default>
+        </video>
+
+        <audio autoplay controls>
+            <source src="Video/DrivingMusic.mp4" type="audio/mp4">
+        </audio>
+
+        <h2>Featured Cars</h2>
+        <div class="car-grid">
+            <div class="car-card">
+                <picture>
+                    <source type="image/webp" media="(max-width: 600px)" srcset="images/car_1-480w.webp">
+                    <source type="image/webp" srcset="images/car_1-320w.webp">
+                    <source media="(max-width: 600px)" srcset="images/car_1-480w.jpg">
+                    <img src="images/car_1-320w.jpg" alt="Car Model 1">
+                </picture>
+                <h3>Car Model 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="car-card">
+                <picture>
+                    <source type="image/webp" media="(max-width: 600px)" srcset="images/car_2-480w.webp">
+                    <source type="image/webp" srcset="images/car_2-320w.webp">
+                    <source media="(max-width: 600px)" srcset="images/car_2-480w.jpg">
+                    <img src="images/car_2-320w.jpg" alt="Car Model 2">
+                </picture>
+                <h3>Car Model 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="car-card">
+                <picture>
+                    <source type="image/webp" media="(max-width: 600px)" srcset="images/car_3-480w.webp">
+                    <source type="image/webp" srcset="images/car_3-320w.webp">
+                    <source media="(max-width: 600px)" srcset="images/car_3-480w.jpg">
+                    <img src="images/car_3-320w.jpg" alt="Car Model 3">
+                </picture>
+                <h3>Car Model 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="car-card">
+                <picture>
+                    <source type="image/webp" media="(max-width: 600px)" srcset="images/car_4-480w.webp">
+                    <source type="image/webp" srcset="images/car_4-320w.webp">
+                    <source media="(max-width: 600px)" srcset="images/car_4-480w.jpg">
+                    <img src="images/car_4-320w.jpg" alt="Car Model 4">
+                </picture>
+                <h3>Car Model 4</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="car-card">
+                <picture>
+                    <source type="image/webp" media="(max-width: 600px)" srcset="images/car_5-480w.webp">
+                    <source type="image/webp" srcset="images/car_5-320w.webp">
+                    <source media="(max-width: 600px)" srcset="images/car_5-480w.jpg">
+                    <img src="images/car_5-320w.jpg" alt="Car Model 5">
+                </picture>
+                <h3>Car Model 5</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="car-card">
+                <picture>
+                    <source type="image/webp" media="(max-width: 600px)" srcset="images/car_6-480w.webp">
+                    <source type="image/webp" srcset="images/car_6-320w.webp">
+                    <source media="(max-width: 600px)" srcset="images/car_6-480w.jpg">
+                    <img src="images/car_6-320w.jpg" alt="Car Model 6">
+                </picture>
+                <h3>Car Model 6</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+
+            <div class="car-card">
+                <picture>
+                    <source type="image/webp" media="(max-width: 600px)" srcset="images/car_7-480w.webp">
+                    <source type="image/webp" srcset="images/car_7-320w.webp">
+                    <source media="(max-width: 600px)" srcset="images/car_7-480w.jpg">
+                    <img src="images/car_7-320w.jpg" alt="Car Model 7">
+                </picture>
+                <h3>Car Model 7</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <p>Copyright &copy; 2026 Tim Korn</p>
     </footer>
-<script src="password.js"></script>
+
+    <script src="main.js"></script>
 </body>
 </html>

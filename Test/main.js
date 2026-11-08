@@ -1,7 +1,7 @@
 
 function validateSearch() {
   const errors = [];
-  const form = document.querySelector("form");
+  const form = document.querySelector(".hero-form form");
 
   const fields = form.querySelectorAll("input, select");
 
@@ -42,7 +42,7 @@ function validateSearch() {
 }
 
 document.getElementById("search-button").addEventListener("click", function (event) {
-  const form = document.querySelector("form");
+  const form = document.querySelector(".hero-form form");
 
   const oldList = form.querySelector("ul.errors");
 
