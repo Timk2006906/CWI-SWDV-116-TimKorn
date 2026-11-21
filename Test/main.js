@@ -34,15 +34,42 @@ function displayCars(carList) {
     const desc = document.createElement("p");
     desc.textContent = car.description;
 
+    const rentButton = document.createElement("button");
+    rentButton.textContent = "Rent This Car";
+
+    rentButton.addEventListener("click", function() {
+      const params = new URLSearchParams(window.location.search);
+      const startDate = params.get("pickup");
+     const returnDate = params.get("return");
+     const rentalEvent = new CustomEvent("confirm-rental", {
+          bubbles: true,
+          detail: {
+    carType: car.type,
+    startDate: startDate,
+    returnDate: returnDate
+}
+              
+      
+    });
+    rentButton.dispatchEvent(rentalEvent);
+  });
+
     card.appendChild(title);
     card.appendChild(type);
     card.appendChild(desc);
+    card.appendChild(rentButton);
     container.appendChild(card);
   });
 }
 
 function listCars() {
   const params = new URLSearchParams(window.location.search);
+
+  const startDate = params.get("pickup")
+  const returnDate = params.get("return")
+
+  console.log(startDate);
+  console.log(returnDate);
 
   if (params.has("type")) {
     const type = params.get("type");

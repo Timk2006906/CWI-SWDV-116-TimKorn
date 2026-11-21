@@ -25,11 +25,44 @@
             </ul>
         </nav>
     </div>
-    <div id="car-list"></div>  <!-- put this where the cars should appear -->
+    <div id="car-list"></div>  
+    <dialog id="rental-dialog">
+    <h2>Confirm Your Rental</h2>
 
+    <p id="rental-car"></p>
+    <p id="rental-start"></p>
+    <p id="rental-return"></p>
+
+
+    <button id="confirm-button">Confirm</button>
+    <button id="cancel-button">Cancel</button>
+</dialog>
 <script src="main.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", listCars);
+  document.addEventListener("confirm-rental", function(event){
+    console.log(event.detail.carType);
+    console.log(event.detail.startDate);
+    console.log(event.detail.returnDate);  
+    const dialog = document.getElementById("rental-dialog");
+
+document.getElementById("rental-car").textContent = "Car Type: " + event.detail.carType;
+document.getElementById("rental-start").textContent = "Start Date: " + event.detail.startDate;
+document.getElementById("rental-return").textContent = "Return Date: " + event.detail.returnDate;
+    dialog.showModal(); 
+  });
+  document.getElementById("cancel-button").addEventListener("click", function() {
+    const dialog = document.getElementById("rental-dialog");
+    dialog.close();
+});
+document.getElementById("confirm-button").addEventListener("click", function() {
+const dialog = document.getElementById("rental-dialog");
+dialog.close();
+
+console.log(document.getElementById("rental-car").textContent);
+console.log(document.getElementById("rental-start").textContent);
+console.log(document.getElementById("rental-return").textContent);
+});
 </script>
 </body>
 </html>
